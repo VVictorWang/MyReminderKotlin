@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.victor.kotlintest.ui.AddRemindActivity">
+
+
+    <EditText
+        android:id="@+id/alertTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="top"
+        android:gravity="start"
+        android:hint="标题"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/alertContent"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:gravity="start"
+        android:hint="输入新的备忘录"
+        android:inputType="textMultiLine"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="确定"
+        android:layout_marginTop="10dp"
+        android:id="@+id/confirm"
+        />
+
+</LinearLayout>

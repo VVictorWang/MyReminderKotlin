@@ -12,7 +12,8 @@ import java.util.*
  */
 
 @Entity(tableName = "reminds")
-data class RemindBean(@PrimaryKey @ColumnInfo(name = "id") val id: String = UUID.randomUUID().toString(),
-                      @ColumnInfo(name = "title") var title: String
+data class RemindBean(@PrimaryKey @ColumnInfo(name = "id") var id: String = UUID.randomUUID().toString()
                       , @ColumnInfo(name = "description") var desc: String,
-                      @ColumnInfo(name = "create_time") val creat_time: Long)
+                      @ColumnInfo(name = "create_time") val creat_time: Long,
+                      @ColumnInfo(name = "time") var time: Long,
+                      @ColumnInfo(name = "repeate") var repeat: Int)

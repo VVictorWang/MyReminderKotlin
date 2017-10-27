@@ -1,9 +1,9 @@
 package com.victor.kotlintest.ui
 
-import android.arch.lifecycle.LifecycleActivity
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.victor.kotlintest.Injection
@@ -13,7 +13,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : LifecycleActivity() {
+class MainActivity : AppCompatActivity() {
 
 
     private lateinit var viewModelFactory: ViewModelFactory
@@ -45,12 +45,16 @@ class MainActivity : LifecycleActivity() {
 
     private fun initData() {
 
+//        disposable.add(viewModel.deleteAllReminds().subscribeOn(Schedulers.io()).
+//                observeOn(AndroidSchedulers.mainThread()).subscribe())
+
         viewModel.getAllReminds().subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     if (it.isEmpty()) {
                         empty.visibility = View.VISIBLE
                     } else {
+                        empty.visibility = View.INVISIBLE
                         reminderList.adapter = RemindAdapter(it, this)
                     }
                 })

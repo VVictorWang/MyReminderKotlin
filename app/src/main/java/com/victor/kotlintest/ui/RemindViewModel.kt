@@ -25,4 +25,7 @@ class RemindViewModel(private val dataSource: RemindDao) : ViewModel() {
     fun insertRemind(remind: RemindBean): Completable {
         return CompletableFromAction(Action { dataSource.insertRemind(remind) })
     }
+
+    fun deleteAllReminds(): Completable = CompletableFromAction(Action { dataSource.deleteAllRemind() })
+
 }

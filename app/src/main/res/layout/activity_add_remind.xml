@@ -6,31 +6,151 @@
               android:orientation="vertical"
               tools:context="com.victor.kotlintest.ui.AddRemindActivity">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        >
 
-    <EditText
-        android:id="@+id/alertTitle"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_gravity="top"
-        android:gravity="start"
-        android:hint="标题"
-        android:inputType="textPersonName"/>
+        <com.victor.kotlintest.widget.PickerView
+            android:id="@+id/pickerHour"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            />
+
+
+        <com.victor.kotlintest.widget.PickerView
+            android:id="@+id/pickerMinute"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            />
+
+
+    </LinearLayout>
+
 
     <EditText
         android:id="@+id/alertContent"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_white"
         android:gravity="start"
         android:hint="输入新的备忘录"
-        android:inputType="textMultiLine"/>
+        android:inputType="textMultiLine"
+        android:padding="8dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/repeate_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="重复"
+            />
+
+        <TextView
+            android:id="@+id/sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/repeate_text"
+            android:background="@drawable/cirle_white"
+            android:gravity="center"
+            android:text="日"
+            />
+
+        <TextView
+            android:id="@+id/monday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/sunday"
+            android:background="@drawable/cirle_white"
+            android:gravity="center"
+            android:text="一"
+            />
+
+        <TextView
+            android:id="@+id/tuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/monday"
+            android:background="@drawable/cirle_white"
+            android:gravity="center"
+            android:text="二"
+            />
+
+        <TextView
+            android:id="@+id/wendesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/tuesday"
+            android:background="@drawable/cirle_white"
+            android:gravity="center"
+            android:text="三"
+            />
+
+        <TextView
+            android:id="@+id/thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/wendesday"
+            android:background="@drawable/cirle_white"
+            android:gravity="center"
+            android:text="四"
+            />
+
+        <TextView
+            android:id="@+id/friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/thursday"
+            android:background="@drawable/cirle_white"
+            android:gravity="center"
+            android:text="五"
+            />
+
+        <TextView
+            android:id="@+id/saturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/friday"
+            android:background="@drawable/cirle_white"
+            android:gravity="center"
+            android:text="六"
+            />
+    </RelativeLayout>
 
     <Button
+        android:id="@+id/confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="确定"
         android:layout_marginTop="10dp"
-        android:id="@+id/confirm"
+        android:text="确定"
         />
 
 </LinearLayout>

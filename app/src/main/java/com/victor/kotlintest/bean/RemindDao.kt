@@ -1,9 +1,6 @@
 package com.victor.kotlintest.bean
 
-import android.arch.persistence.room.Dao
-import android.arch.persistence.room.Insert
-import android.arch.persistence.room.OnConflictStrategy
-import android.arch.persistence.room.Query
+import android.arch.persistence.room.*
 import io.reactivex.Flowable
 
 /**
@@ -23,5 +20,9 @@ interface RemindDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertRemind(remind: RemindBean)
+
+    @Query("DELETE FROM reminds")
+    fun deleteAllRemind()
+
 
 }
